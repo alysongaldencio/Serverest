@@ -50,9 +50,10 @@ npm run test:api
 ```
 cypress/
 ├── e2e/
-│   └── login/
-│       ├── e2e/login-e2e.cy.js    # Interface tests
-│       └── api/users-crud-api.cy.js # API tests
+│   ├── login-ui/
+│   │   └── login.cy.js             # Interface tests
+│   └── users-api/
+│       └── users.cy.js             # API tests
 ├── support/
 │   ├── api/
 │   │   ├── ApiClient.js           # HTTP client
@@ -132,8 +133,8 @@ Test data is located in `cypress/fixtures/data/users.json`:
 |--------|-------------|
 | `npm run cy:open` | Open Cypress interface |
 | `npm run cy:run` | Run all tests |
-| `npm run test:e2e` | Run E2E tests only |
-| `npm run test:api` | Run API tests only |
+| `npm run test:login` | Run login E2E tests only |
+| `npm run test:users` | Run users CRUD tests only |
 
 ## 📚 Resources
 
@@ -203,9 +204,10 @@ npm run test:api
 ```
 cypress/
 ├── e2e/
-│   └── login/
-│       ├── e2e/login-e2e.cy.js    # Testes de interface
-│       └── api/users-crud-api.cy.js # Testes de API
+│   ├── login-ui/
+│   │   └── login.cy.js             # Testes de interface
+│   └── users-api/
+│       └── users.cy.js             # Testes de API
 ├── support/
 │   ├── api/
 │   │   ├── ApiClient.js           # Cliente HTTP
@@ -285,8 +287,8 @@ Os dados de teste estão em `cypress/fixtures/data/users.json`:
 |--------|-----------|
 | `npm run cy:open` | Abre interface do Cypress |
 | `npm run cy:run` | Executa todos os testes |
-| `npm run test:e2e` | Executa apenas testes E2E |
-| `npm run test:api` | Executa apenas testes API |
+| `npm run test:login` | Executa apenas testes E2E de login |
+| `npm run test:users` | Executa apenas testes CRUD de usuários |
 
 ## 📚 Recursos
 

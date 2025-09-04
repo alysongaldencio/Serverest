@@ -1,6 +1,6 @@
-import LoginPage from '../../../support/pages/LoginPage'
+import LoginPage from '../../support/pages/LoginPage'
 
-describe('Login E2E - Serverest', () => {
+describe('Login UI Tests - Serverest', () => {
 
   // Valid login
   it('Should log in with valid credentials', () => {

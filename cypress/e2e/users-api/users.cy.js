@@ -1,6 +1,6 @@
-import UserApiService from '../../../support/api/UserApiService'
+import UserApiService from '../../support/api/UserApiService'
 
-describe('API Tests - Serverest', () => {
+describe('Users API Tests - Serverest', () => {
   
   let userApiService
 

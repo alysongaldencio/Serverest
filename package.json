@@ -6,14 +6,10 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run:e2e": "cypress run --spec 'cypress/e2e/login/e2e/**/*.cy.js'",
-    "cy:run:api": "cypress run --spec 'cypress/e2e/login/api/**/*.cy.js'",
-    "cy:run:login": "cypress run --spec 'cypress/e2e/login/**/*.cy.js'",
     "test": "cypress run",
     "test:open": "cypress open",
-    "test:e2e": "npm run cy:run:e2e",
-    "test:api": "npm run cy:run:api",
-    "test:login": "npm run cy:run:login"
+    "test:login": "cypress run --spec 'cypress/e2e/login-ui/**/*.cy.js'",
+    "test:users": "cypress run --spec 'cypress/e2e/users-api/**/*.cy.js'"
   },
   "keywords": [],
   "author": "Alyson Galdencio",
