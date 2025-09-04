@@ -38,11 +38,11 @@ npm run cy:open
 
 ### Run specific tests
 ```bash
-# E2E tests only
-npm run test:e2e
+# UI tests only
+npm run test:login
 
 # API tests only
-npm run test:api
+npm run test:users
 ```
 
 ## 📁 Project Structure
@@ -192,11 +192,11 @@ npm run cy:open
 
 ### Executar testes específicos
 ```bash
-# Apenas testes E2E
-npm run test:e2e
+# Apenas testes UI
+npm run test:login
 
 # Apenas testes API
-npm run test:api
+npm run test:users
 ```
 
 ## 📁 Estrutura do Projeto
