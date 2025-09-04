@@ -52,7 +52,7 @@ cypress/
 ├── e2e/
 │   └── login/
 │       ├── e2e/login-e2e.cy.js    # Interface tests
-│       └── api/login-api.cy.js    # API tests
+│       └── api/users-crud-api.cy.js # API tests
 ├── support/
 │   ├── api/
 │   │   ├── ApiClient.js           # HTTP client
@@ -205,7 +205,7 @@ cypress/
 ├── e2e/
 │   └── login/
 │       ├── e2e/login-e2e.cy.js    # Testes de interface
-│       └── api/login-api.cy.js    # Testes de API
+│       └── api/users-crud-api.cy.js # Testes de API
 ├── support/
 │   ├── api/
 │   │   ├── ApiClient.js           # Cliente HTTP
