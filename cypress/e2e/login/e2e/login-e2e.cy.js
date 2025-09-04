@@ -1,0 +1,38 @@
+import LoginPage from '../../../support/pages/LoginPage'
+
+describe('Login E2E - Serverest', () => {
+
+  // Valid login
+  it('Should log in with valid credentials', () => {
+    cy.loginUiValidUser()
+    cy.wait(5000)
+    cy.url().should('not.include', '/login')
+    cy.log('Login bem-sucedido')
+  })
+
+  // Invalid login
+  it('Should display errors with invalid credentials', () => {
+    cy.ensureInvalidUserDoesNotExist()
+    cy.loginUiInvalidUser()
+    cy.wait(3000)
+    const loginPage = new LoginPage()
+    loginPage.checkLoginError('Email e/ou senha inválidos')
+  })
+
+  // Email blank
+  it('Should display an alert when the email is blank', () => {
+    cy.loginUiEmptyEmail()
+    cy.wait(3000)
+    const loginPage = new LoginPage()
+    loginPage.checkLoginError('Email é obrigatório')
+  })
+
+  // Password blank
+  it('Should display an alert when the password is blank', () => {
+    cy.loginUiEmptyPassword()
+    cy.wait(3000)
+    const loginPage = new LoginPage()
+    loginPage.checkLoginError('Password é obrigatório')
+  })
+  
+})
