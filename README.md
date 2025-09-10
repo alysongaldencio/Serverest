@@ -106,7 +106,6 @@ The project uses the following configurations:
 - **Base URL**: https://front.serverest.dev
 - **API URL**: https://serverest.dev
 - **Viewport**: 1280x720
-- **Timeouts**: 30s (commands), 60s (page load)
 
 ## 📊 Test Data
 
@@ -260,7 +259,7 @@ O projeto usa as seguintes configurações:
 - **Base URL**: https://front.serverest.dev
 - **API URL**: https://serverest.dev
 - **Viewport**: 1280x720
-- **Timeouts**: 30s (comandos), 60s (carregamento)
+
 
 ## 📊 Dados de Teste
 

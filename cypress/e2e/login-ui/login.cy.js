@@ -5,7 +5,6 @@ describe('Login UI Tests - Serverest', () => {
   // Valid login
   it('Should log in with valid credentials', () => {
     cy.loginUiValidUser()
-    cy.wait(5000)
     cy.url().should('not.include', '/login')
     cy.log('Login bem-sucedido')
   })
@@ -14,7 +13,7 @@ describe('Login UI Tests - Serverest', () => {
   it('Should display errors with invalid credentials', () => {
     cy.ensureInvalidUserDoesNotExist()
     cy.loginUiInvalidUser()
-    cy.wait(3000)
+    cy.get('.alert span').should('be.visible')
     const loginPage = new LoginPage()
     loginPage.checkLoginError('Email e/ou senha inválidos')
   })
@@ -22,7 +21,7 @@ describe('Login UI Tests - Serverest', () => {
   // Email blank
   it('Should display an alert when the email is blank', () => {
     cy.loginUiEmptyEmail()
-    cy.wait(3000)
+    cy.get('.alert span').should('be.visible')
     const loginPage = new LoginPage()
     loginPage.checkLoginError('Email é obrigatório')
   })
@@ -30,7 +29,7 @@ describe('Login UI Tests - Serverest', () => {
   // Password blank
   it('Should display an alert when the password is blank', () => {
     cy.loginUiEmptyPassword()
-    cy.wait(3000)
+    cy.get('.alert span').should('be.visible')
     const loginPage = new LoginPage()
     loginPage.checkLoginError('Password é obrigatório')
   })
